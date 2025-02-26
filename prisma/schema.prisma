@@ -1,0 +1,53 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String     @id @default(cuid())
+  name      String
+  email     String     @unique
+  password  String
+  mainTasks MainTask[]
+}
+
+model MainTask {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  status      Status
+  dueDate     DateTime
+  priority    Priority
+  userId      String
+
+  user       User        @relation(fields: [userId], references: [id])
+  childTasks ChildTask[]
+}
+
+model ChildTask {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  status      Status
+  dueDate     DateTime
+  priority    Priority
+  mainTaskId  String
+
+  mainTask MainTask @relation(fields: [mainTaskId], references: [id])
+}
+
+enum Status {
+  Pending
+  In_Progress
+  Completed
+}
+
+enum Priority {
+  Low
+  Medium
+  High
+}

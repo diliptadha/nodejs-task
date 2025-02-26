@@ -7,10 +7,10 @@ if (!JWT_SIGNING_KEY) {
 }
 
 export interface AuthenticatedRequest extends Request {
-  user?: string | JwtPayload;
+  user?: string | JwtPayload
 }
 
-const authenticateToken = (
+const isauthenticated = (
   req: AuthenticatedRequest,
   res: Response,
   next: NextFunction
@@ -27,11 +27,12 @@ const authenticateToken = (
   const token = authHeader.split(" ")[1];
 
   try {
-    jwt.verify(token, JWT_SIGNING_KEY);
+    const decoded = jwt.verify(token, JWT_SIGNING_KEY);
+    req.user = decoded;
     next();
   } catch (error) {
     res.status(403).json({ message: "Forbidden access: Invalid token" });
   }
 };
 
-export default authenticateToken;
+export default isauthenticated;

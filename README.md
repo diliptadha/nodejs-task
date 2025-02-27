@@ -1,5 +1,12 @@
 # Task Manager System
 
+
+## tech stack
+
+- Node.js
+- Express.js
+- Mysql (Prisma ORM)
+
 ## Installation
 
 Before you begin, make sure you have Node.js and npm installed on your system.
@@ -33,6 +40,12 @@ npm run start
 ```
 
 This will install the necessary dependencies and start the server on the specified port.
+
+## view database in browser
+
+```sh
+npx prisma studio
+```
 
 
 ## API Documentation

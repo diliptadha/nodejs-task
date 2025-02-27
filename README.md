@@ -20,7 +20,7 @@ Before you begin, make sure you have Node.js and npm installed on your system.
 2. Navigate to the project directory:
 
 ```sh
-   cd Reelzzz_server
+   cd nodejs-task
  ```
 
 3. Rename the `env_example` file to `.env` and update the values in it:
@@ -42,7 +42,6 @@ i will delete it after interview
 Once you have configured the `.env` file, you can start the server by running:
 
 ```sh
-npm run build
 npm run start
 ```
 

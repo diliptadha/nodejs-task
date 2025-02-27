@@ -1,0 +1,453 @@
+{
+  "info": {
+    "name": "dilip",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "main task",
+      "item": [
+        {
+          "name": "create main task",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiaWF0IjoxNzQwNTkxNDgwLCJleHAiOjE3NDA2Nzc4ODB9.xRHV4wHjEs25khRWCGmzKi4aIQuG8T6p0SMgMhxgI5A",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"coding 6\",\n  \"description\": \"laptop coding\",\n  \"status\": \"Pending\",\n  \"dueDate\": \"Jan,2024\",\n  \"priority\": \"Low\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "get all main task",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiZW1haWwiOiJkaWxpcEBnbWFpbC5jb20iLCJpYXQiOjE3NDA1OTQwNTEsImV4cCI6MTc0MDY4MDQ1MX0.h5dQq1MNISrRhPv8o5nVnJKO1kxOFSKgrznoGpI2UAQ",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "3"
+                },
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "get one main task",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8g9ee000ffvz40qe5hhjd",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8g9ee000ffvz40qe5hhjd"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "update main task",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiaWF0IjoxNzQwNTkxNDgwLCJleHAiOjE3NDA2Nzc4ODB9.xRHV4wHjEs25khRWCGmzKi4aIQuG8T6p0SMgMhxgI5A",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8xqtl000dfvkgr7z0hjhj",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8xqtl000dfvkgr7z0hjhj"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"coding44asd4 6\",\n  \"description\": \"laptop coding\",\n  \"status\": \"Pending\",\n  \"dueDate\": \"Jan,2024\",\n  \"priority\": \"Medium\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "deleten main task",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiZW1haWwiOiJkaWxpcEBnbWFpbC5jb20iLCJpYXQiOjE3NDA1OTQwNTEsImV4cCI6MTc0MDY4MDQ1MX0.h5dQq1MNISrRhPv8o5nVnJKO1kxOFSKgrznoGpI2UAQ",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8gare000hfvz48oosw6z4",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8gare000hfvz48oosw6z4"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "use auth",
+      "item": [
+        {
+          "name": "login",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"dilip@gmail.com\",\n  \"password\": \"dilipok\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "register",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"dilip\",\n  \"email\": \"dilip@gmail.com\",\n  \"password\": \"dilipok\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "child task",
+      "item": [
+        {
+          "name": "create child task",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiZW1haWwiOiJkaWxpcEBnbWFpbC5jb20iLCJpYXQiOjE3NDA1OTQwNTEsImV4cCI6MTc0MDY4MDQ1MX0.h5dQq1MNISrRhPv8o5nVnJKO1kxOFSKgrznoGpI2UAQ",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8gc5x000jfvz4cpneij7s/child-tasks",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8gc5x000jfvz4cpneij7s",
+                "child-tasks"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"coding 6\",\n  \"description\": \"laptop coding\",\n  \"status\": \"Pending\",\n  \"dueDate\": \"Jan,2024\",\n  \"priority\": \"Low\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "get child task",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiZW1haWwiOiJkaWxpcEBnbWFpbC5jb20iLCJpYXQiOjE3NDA1OTQwNTEsImV4cCI6MTc0MDY4MDQ1MX0.h5dQq1MNISrRhPv8o5nVnJKO1kxOFSKgrznoGpI2UAQ",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8gc5x000jfvz4cpneij7s/child-tasks",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8gc5x000jfvz4cpneij7s",
+                "child-tasks"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "delete child task",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiZW1haWwiOiJkaWxpcEBnbWFpbC5jb20iLCJpYXQiOjE3NDA1OTQwNTEsImV4cCI6MTc0MDY4MDQ1MX0.h5dQq1MNISrRhPv8o5nVnJKO1kxOFSKgrznoGpI2UAQ",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8gc5x000jfvz4cpneij7s/child-tasks/cm7m9od310001fv80ifvxakkb",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8gc5x000jfvz4cpneij7s",
+                "child-tasks",
+                "cm7m9od310001fv80ifvxakkb"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "update child task",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbTdtNm8za3cwMDAwZnZiOGN0YnJneDBrIiwiZW1haWwiOiJkaWxpcEBnbWFpbC5jb20iLCJpYXQiOjE3NDA1OTQwNTEsImV4cCI6MTc0MDY4MDQ1MX0.h5dQq1MNISrRhPv8o5nVnJKO1kxOFSKgrznoGpI2UAQ",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/cm7m8gc5x000jfvz4cpneij7s/child-tasks/cm7m9tejr0001fve0vpjsn33q",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "tasks",
+                "cm7m8gc5x000jfvz4cpneij7s",
+                "child-tasks",
+                "cm7m9tejr0001fve0vpjsn33q"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"coding 6asdf\",\n  \"description\": \"laptop coding\",\n  \"status\": \"Pending\",\n  \"dueDate\": \"Jan,2024\",\n  \"priority\": \"Low\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": []
+}

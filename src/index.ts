@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
-import express, { NextFunction, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth.route";
 import mainTaskRoutes from "./routes/mainTask.route";
@@ -28,14 +28,14 @@ app.listen(PORT, () => {
 });
 
 // path not found
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).json({
     message: "404 not found path",
   });
 });
 
 // global error handler
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response) => {
   console.error('Error occurred:', {
     method: req.method,
     path: req.path,

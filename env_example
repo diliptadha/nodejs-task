@@ -1,0 +1,3 @@
+JWT_SECRET="dilip"
+PORT="3000"
+DATABASE_URL="mysql://username:password@hostname/mydb?schema=public"

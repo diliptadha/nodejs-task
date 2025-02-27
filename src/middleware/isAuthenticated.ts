@@ -31,7 +31,7 @@ const isauthenticated = (
     req.user = decoded;
     next();
   } catch (error) {
-    res.status(403).json({ message: "Forbidden access: Invalid token" });
+    res.status(403).json({ message: "Forbidden access: Invalid token", error });
   }
 };
 

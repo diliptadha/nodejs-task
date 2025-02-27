@@ -29,6 +29,13 @@ Before you begin, make sure you have Node.js and npm installed on your system.
    mv env_example .env
   ```
 
+for easy testing purpose my database url is
+
+```sh 
+mysql://root:[d_d&zyX@34.131.3.124/mydb?schema=public
+```
+i will delete it after interview
+
 
 ## Running the Server
 
